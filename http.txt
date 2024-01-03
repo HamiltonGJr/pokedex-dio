@@ -1,0 +1,69 @@
+* Requisição HTTP:
+
+URL: https://pokeapi.co/api/v2/pokemon
+     ${IP = endereço}/${path = caminho de ientificação do recurso}
+
+IP:   https://pokeapi.co
+Path: /api/v2/pokemon
+
+Request Methods: GET | POST | PUT | DELETE | PATCH
+
+GET - Buscar algum recurso.
+POST - Inserir algum recurso.
+PUT - Atualizar todo recurso.
+DELETE - Deletar o recurso.
+PATCH - Atualizar algo especifico do recurso.
+
+
+
+* Requisições HTTP - QUERY STRING:
+
+URL + Query String: https://pokeapi.co/api/v2/pokemon?type=grass&name=1
+     ${IP = endereço}/${path = caminho de ientificação do recurso}/${queryString = uma esprecificação do recurso buscado}
+
+IP :           https://pokeapi.co
+Path :         /api/v2/pokemon
+Query String : ?type=grass&name=1
+
+OBS. : Tudo que esta pós o ponto de inteerrogação '?', será a nossa Query String (?type=grass&name=1 ou ?offset=0&limit=20).
+
+
+
+* Requisição HTTP - Headers:
+
+Headers são uma especie de configuração da nossa requisição. Nos passamos dados que fazem sentido para confirgurarmos a requisição. Podemos ter algo como:
+
+REQUEST Headers
+'Accepts : 
+text/html,
+application/xhtml+xml,
+application/xml;q=0.9,
+image/avif,image/webp,
+image/apng,*/*;q=0.8,
+application/signed-exchange;v=b3;q=0.7'
+
+Nesta configuração 'Accepts:' nos estamos especificando como nos aceitamos esta requisição como resposta em varios jeitos diferentes ('text/html' = Aquivo HTML ou 'application/xhtml+xml' = Aquivo XML).
+
+RESPONSE Headers
+'content-type :
+application/json: charset=utf-8'
+
+Nesta configuração 'content-type:' nos estamos tendo a respostada de como estamos recebendo estes dados, neste caso em json ('application/json: charset=utf-8').
+
+
+
+* Requisição HTTP - Body:
+Basicamente o corpo da nossa requisição, a vizualização do que estamos requerindo, inserindo, atualizando ou ate deletando da nossa API. 
+
+BODY (json) : 
+
+{
+     "nome": "Hamilton",
+     "sobrenome": "Gonçalves",
+     "idade": 21
+}
+
+
+
+* Requisição HTTP - Status Code:
+Aqui ja entendemos em que situação a nossa requisição esta, com códigos como por exemplo '200', que nos indica que a requisição foi bem sucedida ou o '201', que nos indicaa que conseguimos cadastrar ou atualizar algo com sucesso ( estudar todo os tipos de 'status code').
